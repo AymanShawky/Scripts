@@ -1,0 +1,5 @@
+
+SELECT OBJECT_NAME(object_id),
+definition
+FROM sys.sql_modules
+WHERE objectproperty(object_id,'IsProcedure') = 1 AND definition like '% MY_TEXT_HERE %'
