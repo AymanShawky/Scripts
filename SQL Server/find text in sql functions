@@ -1,0 +1,5 @@
+
+SELECT OBJECT_NAME(object_id),
+definition
+FROM sys.sql_modules
+WHERE definition like '%function%' and definition like '% MY_TEXT_HERE %'
